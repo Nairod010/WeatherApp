@@ -6,23 +6,24 @@ import airbnbBase from "eslint-config-airbnb-base";
 const airbnbBaseConfig = airbnbBase;
 
 export default [
-    // Start with ESLint's recommended rules
-    {
-        ...pluginJs.configs.recommended,
-        languageOptions: {
-            globals: { ...pluginJs.configs.recommended.languageOptions?.globals, ...globals.browser,
-            },
-        },
+  // Start with ESLint's recommended rules
+  {
+    ...pluginJs.configs.recommended,
+    languageOptions: {
+      globals: {
+        ...pluginJs.configs.recommended.languageOptions?.globals, ...globals.browser,
+      },
     },
-    {
-        rules: {
-            ...airbnbBaseConfig.rules,
-            "quotes": ["error", "double"],
-            "no-console": "warn",
-            "indent": ["error", 4],
-            "no-unused-vars": ["error"],
-            // Add additional custom rules here
-        },
+  },
+  {
+    rules: {
+      ...airbnbBaseConfig.rules,
+      "quotes": ["error", "double"],
+      "no-console": "warn",
+      "indent": ["error", 2],
+      "no-unused-vars": ["error"],
+      // Add additional custom rules here
     },
+  },
 ];
 
